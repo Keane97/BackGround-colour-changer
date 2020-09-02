@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Colour Changer</title>
+    <script>
+        function ChangeBodyColour(colour) {
+            document.body.style.background = colour;
+        }
+        function RandomColour() {
+            var Random = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.background = "#" + Random;
+        }
+    </script>
+</head>
+<body>
+    <h1>Colour Changer</h1>
+    <p>Click the button to change the background colour</p>
+    <hr> 
+    <div>
+        <label>Change colour To:</label>
+        <button type="button" onclick="ChangeBodyColour('yellow')">Yellow</button>
+        <button type="button" onclick="ChangeBodyColour('green')">Green</button>
+        <button type="button" onclick="ChangeBodyColour('blue')">Blue</button>
+        <button type="button" onclick="RandomColour()">Random</button>
+    </div>
+</body>
+</html>
